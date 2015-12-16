@@ -21,6 +21,24 @@ angular.module "receita", [
 
 .controller 'controll', [
   '$scope', '$filter'
-  (sc, $filter)->
+  ($scope, $filter)->
 
+    $scope.recipes = [
+      {
+        id: 1
+        name: 'Baked Potato w/ Cheese'
+      }
+      {
+        id: 2
+        name: 'Garlic Mashed Potatoes'
+      }
+      {
+        id: 3
+        name: 'Potatoes Au Gratin'
+      }
+      {
+        id: 4
+        name: 'Baked Brussel Sprouts'
+      }
+    ]
 ]
