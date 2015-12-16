@@ -1,0 +1,26 @@
+angular.module "receita", [
+  'ngRoute', 'ngResource'
+]
+
+.config [
+  '$routeProvider', '$locationProvider', '$resourceProvider'
+  ($routeProvider, $locationProvider, $resourceProvider) ->
+
+    $routeProvider
+      .when '/',
+        templateUrl: "<%= asset_path("Home/index") %>"
+        controller: 'Home::IndexCtrl'
+      .when '/home',
+        templateUrl: "<%= asset_path("Home/index") %>"
+        controller: 'Home::IndexCtrl'
+
+    $locationProvider.html5Mode
+      enabled: true
+      requireBase: false
+]
+
+.controller 'controll', [
+  '$scope', '$filter'
+  (sc, $filter)->
+
+]
